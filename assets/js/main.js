@@ -23,11 +23,26 @@ window.addEventListener("scroll", () => {
     }
  });
 
- document.addEventListener("DOMContentLoaded", function() {
-    const menuIcon = document.getElementById("menu-icon");
-    const menu = document.querySelector(".menu");
 
-    menuIcon.addEventListener("click", function() {
-        menu.classList.toggle("open");
-    });
-});
+ function addOrRemoveMenuIcon() {
+    const navbar = document.querySelector("nav");
+    const windowWidth = window.innerWidth;
+  
+    if (windowWidth <= 768) {
+      let triple = document.querySelector(".menu-icon");
+      if (!triple) {
+        triple = document.createElement("div");
+        triple.setAttribute("class", "menu-icon");
+        navbar.appendChild(triple);
+      }
+    } else {
+      const triple = document.querySelector(".menu-icon");
+      if (triple) {
+        navbar.removeChild(triple);
+      }
+    }
+  }
+
+addOrRemoveMenuIcon();
+
+window.addEventListener("resize", addOrRemoveMenuIcon);

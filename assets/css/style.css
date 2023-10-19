@@ -1,11 +1,156 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
 @import url('https://fonts.googleapis.com/css?family=Passion+One');
+@import url('https://fonts.googleapis.com/css?family=Assistant');
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+
+/*Main Body*/
+body {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+#bgVideo
+{
+	height: 100vh;
+  object-fit: cover;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
 
 ::-webkit-scrollbar{
 	display: none;
 }
 
+/* Mobile CSS*/
+@media (max-width: 768px) {
+  #navLinks,
+  #icons {
+      display: none !important;
+  }
+  #homeLogo{
+    top: -1.7vh !important;
+  }
+}
+
+.menu-icon {
+  top: 4vh;
+  left: 5%;
+  transform: translateX(-5%);
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  cursor: pointer;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon::before {
+  top: -10px;
+}
+
+.menu-icon::after {
+  top: 10px;
+}
+
+.menu-icon.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-icon.open::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/*Navbar*/
+nav
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 8vh;
+  margin: 0 auto;
+  transition: all 0.45s ease;
+  color: white;
+  transition: 1s ease all;
+
+}
+
+#navLinks
+{
+  z-index: 1;
+  position: absolute;
+  font-size: 1.9vh;
+  top: 2.5vh;
+  left: 5%;
+  transform: translateX(-5%)
+}
+
+#navLinks a
+{
+	font-family: "Kanit";
+	color: white;
+	text-decoration: none;
+  font-weight: 200;
+  transition: .5s ease all;
+}
+
+#navLinks a:hover
+{
+  color: #888888;
+  text-decoration: underline;
+}
+
+#icons {
+  z-index: 1;
+  position: absolute;
+  font-size: 2.5vh;
+  top: 2.5vh;
+  display: flex;
+  left: 97%;
+  transform: translateX(-97%);
+}
+
+#icons a
+{
+	font-family: "Assistant", sans-serif;
+	color: white;
+	text-decoration: none;
+  font-weight: 200;
+  transition: .5s ease all;
+}
+
+#icons a:hover
+{
+  color: #888888;
+}
+
+#homeLogo{
+  max-width: 6vh;
+  padding: 1em;
+  position: absolute;
+  top: -1vh;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+/*Other CSS*/
 .loading {
   width: 100%;
   height: 100%;
@@ -40,70 +185,7 @@
     transform: rotate(360deg);
   }
 }
-
-body {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-video
-{
-	height: 100vh;
-  object-fit: cover;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -9999;
-}
-
-#menu-icon {
-  display: none;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-  #left-side a
-  {
-    text-decoration: none;
-    position: absolute;
-  }
-  .menu {
-      flex-direction: column;
-      display: none;
-  }
-  
-  #menu-icon {
-      display: block;
-  }
-  
-  .menu.open {
-      display: flex;
-  }
-}
-
-#landingPage{
-  height: 100vh;
-}
-nav
-{
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  height: 8vh;
-  margin: 0 auto;
-  transition: all 0.45s ease;
-  color: white;
-  transition: 1s ease all;
-
-}
 /* Some Shit */
-
-#logo1{
-  width: 25vh;
-}
 #mainText{
   position: absolute;
   left: 50%;
@@ -114,39 +196,13 @@ nav
 
 #mainText h1{
   font-size: 5.2vh;
-  font-family: "Passion One";
-  -webkit-text-stroke: 1.5px black; 
+  font-family: "Kanit";
   color: white;
 
 }
 
 .scroll {
-	background-color: rgba(1, 1, 1, 0.693);
-	color: white;
-}
-
-#middle-side
-{
-  z-index: 1;
-  position: relative;
-  top: 2.5vh;
-  text-align: center;
-  font-size: 1.8vh;
-}
-
-#middle-side a
-{
-	font-family: "Anonymous Pro", sans-serif;
-	color: white;
-	text-decoration: none;
-}
-
-#left-side a
-{
-  top: .5vh;
-  text-decoration: none;
-  left: 1.5vh;
-  position: absolute;
+	background-color: rgba(1, 1, 1, 0.841);
 }
 
 ul{
@@ -175,4 +231,28 @@ li{
 	height: 100vh;
 	width: 100%;
 	background-color: #121212;
+}
+
+#exploreButton{
+  text-decoration: none;
+  font-family: "Kanit";
+  border: none;
+  padding: .75em;
+  border-radius: 0.5em;
+  background: none;
+  color: white;
+  border: 0.2vh solid white;
+  transition: .2s ease-in-out all;
+  font-size: 2vh;
+}
+
+#exploreButton:hover{
+  background-color: white;
+  color: black;
+  transform: translateX(-15px);
+}
+
+/*Second Half*/
+#landingPage{
+  height: 100vh;
 }
