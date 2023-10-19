@@ -7,21 +7,31 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <script src="assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
 </head>
 <body>
-    
+    <div class="loading" delay-hide="1000"></div>
     <nav id="header">
         <div id="left-side"> 
-            <a href=""><img src="" alt=""></a>
+            <a href=""><img src="assets/img/logo2.webp" alt="Neon Airlines Logo 2" height="75" width="75"></a>
         </div>
-  
-        <div id="middle-side"> 
-            <a href="index.html" style="margin-right: 10px;">About</a>
-            <a href="index.html" style="margin-right: 10px;">Services</a>
-            <a href="index.html" style="margin-right: 10px;">Connect</a>
-            <a href="index.html">FAQ</a>
+    
+        <div id="middle-side" class="menu">
+            <a href="index.html" style="margin-right: 10px;">Home</a>
+            <a href="index.html" style="margin-right: 10px;">Customize</a>
+            <a href="index.html" style="margin-right: 10px;">Custom Orders</a>
+            <a href="index.html">Contact</a>
         </div>
-      
+        
+        <div id="mobile-menu" class="menu">
+            <div id="menu-icon">
+                <span>Home</span>
+                <span>Customize</span>
+                <span>Custom Orders</span>
+                <span>Contact</span>
+            </div>
+        </div>
     </nav>
   
       <ul>
@@ -33,6 +43,11 @@
         <video autoplay muted loop id="bgVideo">
             <source src="https://cdn.shopify.com/videos/c/o/v/3485014c2492400c9c514fb9b18bfa6a.mov" type="video/mp4">
         </video>
+
+        <div id="mainText">
+            <img id="logo1" src="assets/img/logo2.webp" alt="Neon Airlines Logo 2" style="margin-bottom: -50px;">
+            <h1>Neon Airlines</h1>
+        </div>
     </section>
 
     <section id="infoPage">

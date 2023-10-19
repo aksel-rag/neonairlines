@@ -1,5 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
+
 ::-webkit-scrollbar{
 	display: none;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #121212;
+  z-index: 1000;
+}
+.loading:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border: 6px solid rgb(255, 255, 255);
+  border-top: 6px dotted rgb(255, 255, 255);
+  border-bottom: 6px dotted rgb(253, 253, 253);
+  border-radius: 50%;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
 }
 
 body {
@@ -18,6 +57,34 @@ video
   z-index: -9999;
 }
 
+#menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  #left-side a
+  {
+    text-decoration: none;
+    position: absolute;
+  }
+  .menu {
+      flex-direction: column;
+      display: none;
+  }
+  
+  #menu-icon {
+      display: block;
+  }
+  
+  .menu.open {
+      display: flex;
+  }
+}
+
+#landingPage{
+  height: 100vh;
+}
 nav
 {
   position: fixed;
@@ -25,13 +92,34 @@ nav
   left: 0;
   z-index: 100;
   width: 100%;
-  height: 6vh;
+  height: 8vh;
   margin: 0 auto;
   transition: all 0.45s ease;
   color: white;
   transition: 1s ease all;
 
 }
+/* Some Shit */
+
+#logo1{
+  width: 25vh;
+}
+#mainText{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+#mainText h1{
+  font-size: 5.2vh;
+  font-family: "Passion One";
+  -webkit-text-stroke: 1.5px black; 
+  color: white;
+
+}
+
 .scroll {
 	background-color: rgba(1, 1, 1, 0.693);
 	color: white;
@@ -41,27 +129,28 @@ nav
 {
   z-index: 1;
   position: relative;
-  top: 1vh;
+  top: 2.5vh;
   text-align: center;
-  font-size: 1.5vh;
+  font-size: 1.8vh;
 }
 
 #middle-side a
 {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Anonymous Pro", sans-serif;
 	color: white;
 	text-decoration: none;
 }
 
 #left-side a
 {
+  top: .5vh;
   text-decoration: none;
-  top: 1.5vh;
-  left: 1.5vw;
+  left: 1.5vh;
   position: absolute;
 }
 
 ul{
+  z-index: 100;
 	top: calc(100% / 2 - 60px);
 	position: fixed;
 	height: auto;
