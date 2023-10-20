@@ -28,12 +28,52 @@ body {
 
 /* Mobile CSS*/
 @media (max-width: 768px) {
+  #productList {
+    display: grid !important;
+    align-items: center !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .product{
+    padding: 1px !important;
+    margin: 1px !important;
+  }
+  .product img {
+    width: 20vh !important;
+    height: 20vh !important;
+  }
   #navLinks,
   #icons {
       display: none !important;
   }
   #homeLogo{
-    top: -1.7vh !important;
+    top: -1.5vh !important;
+  }
+}
+
+@media (max-width: 850px) {
+  #productList {
+    display: grid !important;
+    align-items: center !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .product{
+    padding: 5px !important;
+    margin: 5px !important;
+  }
+  #navLinks,
+  #icons {
+      display: none !important;
+  }
+  #homeLogo{
+    top: -1.5vh !important;
+  }
+}
+
+@media (max-width: 1250px) {
+  #productList {
+    display: grid !important;
+    align-items: center !important;
+    grid-template-columns: 1fr 1fr !important;
   }
 }
 
@@ -186,6 +226,9 @@ nav
   }
 }
 /* Some Shit */
+#landingPage{
+  height: 100vh;
+}
 #mainText{
   position: absolute;
   left: 50%;
@@ -212,7 +255,6 @@ ul{
 	height: auto;
 	right: 10px;
 }
-	
 li{
 	list-style-type: none;
 	width: 0.8vh;
@@ -224,16 +266,10 @@ li{
 }
 	
 .active{
-	background-color: #121212;
+	background-color: #383838;
 }
 
-#infoPage{
-	height: 100vh;
-	width: 100%;
-	background-color: #121212;
-}
-
-#exploreButton{
+.buttonR{
   text-decoration: none;
   font-family: "Kanit";
   border: none;
@@ -246,13 +282,66 @@ li{
   font-size: 2vh;
 }
 
-#exploreButton:hover{
+.buttonR:hover{
   background-color: white;
   color: black;
   transform: translateX(-15px);
 }
 
 /*Second Half*/
-#landingPage{
-  height: 100vh;
+#infoPage{
+	height: 200vh;
+	width: 100%;
+	background-color: #121212;
+}
+#customSigns{
+  text-align: center;
+  font-family: "Kanit";
+  position: absolute;
+  margin-top: 90vh;
+  left: 50%;
+  color: white;
+  transform: translateX(-50%)
+}
+
+#stockSigns{
+  text-align: center;
+  font-family: "Kanit";
+  position: absolute;
+  margin-top: 15vh;
+  left: 50%;
+  color: white;
+  transform: translateX(-50%)
+}
+
+#stockSigns h1{
+  font-size: 5.2vh;
+  margin-bottom: -1px;
+}
+
+#productList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product{
+  padding: 10px;
+}
+.product img {
+  width: 28vh;
+  height: 28vh;
+  object-fit: cover;
+  border-radius: 10px; 
+}
+
+.product h2 {
+  font-size: 1.5vh;
+}
+.product p {
+  margin-top: -10px;
+}
+
+/*Footer*/
+#footer{
+	background-color: #121212;
 }
