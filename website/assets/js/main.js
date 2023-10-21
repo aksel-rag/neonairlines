@@ -1,16 +1,28 @@
-
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("#header");
   const tag1 = document.querySelector("#tag1");
-  const tag2 = document.querySelector("#tag2");    
+  const tag2 = document.querySelector("#tag2");
+  const tag3 = document.querySelector("#tag3");
+  const windowHeight = window.innerHeight;
+  const halfWindowHeight = windowHeight / 2;
   window.addEventListener("scroll", () => {
-    header.classList.toggle("scroll", window.scrollY >= 85);
-    const isScrolledPastThird = this.scrollY > document.body.scrollHeight / 3.25;
-    tag1.classList.toggle("active", !isScrolledPastThird);
-    tag2.classList.toggle("active", isScrolledPastThird);
+    const scrollY = window.scrollY;
+    header.classList.toggle("scroll", scrollY >= 85);
+    if (scrollY <= halfWindowHeight) {
+      tag1.classList.add("active");
+      tag2.classList.remove("active");
+      tag3.classList.remove("active");
+    } else if (scrollY <= windowHeight) {
+      tag1.classList.remove("active");
+      tag2.classList.add("active");
+      tag3.classList.remove("active");
+    } else {
+      tag1.classList.remove("active");
+      tag2.classList.remove("active");
+      tag3.classList.add("active");
+    }
   });
 });
-
 
  function addOrRemoveMenuIcon() {
   const navbar = document.querySelector("nav");

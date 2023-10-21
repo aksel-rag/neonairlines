@@ -70,6 +70,9 @@ body {
 }
 
 @media (max-width: 1250px) {
+  #customSigns{
+    margin-top: 130vh !important;
+  }
   #productList {
     display: grid !important;
     align-items: center !important;
@@ -298,17 +301,22 @@ li{
   text-align: center;
   font-family: "Kanit";
   position: absolute;
-  margin-top: 90vh;
+  margin-top: 105vh;
   left: 50%;
   color: white;
   transform: translateX(-50%)
+}
+
+#customSigns h1{
+  font-size: 5.2vh;
+  margin-bottom: -1px;
 }
 
 #stockSigns{
   text-align: center;
   font-family: "Kanit";
   position: absolute;
-  margin-top: 15vh;
+  margin-top: 10vh;
   left: 50%;
   color: white;
   transform: translateX(-50%)
@@ -320,7 +328,9 @@ li{
 }
 
 #productList {
-  display: flex;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
 }
 
@@ -331,7 +341,8 @@ li{
   width: 28vh;
   height: 28vh;
   object-fit: cover;
-  border-radius: 10px; 
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .product h2 {
@@ -344,4 +355,43 @@ li{
 /*Footer*/
 #footer{
 	background-color: #121212;
+}
+
+
+#remote {
+  width: 10vh;
+  height: 10vh;
+}
+
+
+/*Footer*/
+footer {
+  background-color: #121212;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #3838389a;
+  font-family: "Kanit";
+}
+#copyright{
+  font-size: 1.2vh;
+}
+#copyright a{
+  color: #5518AB;
+  text-decoration: none;
+  transition: .2s all ease;
+}
+
+#copyright a:hover{
+  color: white;
+}
+
+.payment-icons{
+  font-size: 3vh;
+}
+
+.social-menu{
+  margin-top: 5vh;
+  font-size: 3vh;
+
 }
