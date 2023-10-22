@@ -1,6 +1,6 @@
-$(function() {
-    let loading = $(".loading");
-    loading.delay(loading.attr("delay-hide")).slideUp();
+$(window).on("load", function() {
+  let loading = $(".loading");
+  loading.delay(loading.data("delay-hide")).slideUp();
 });
 
 $(function () {

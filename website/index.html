@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<title>Neon Airlines</title>
+  <link id="dynamic-styles" rel="stylesheet" type="text/css" href="">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,7 +20,7 @@
     <script src="https://kit.fontawesome.com/f2057f9f44.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="loading" delay-hide="1000"></div>
+    <div class="loading"></div>
 
     <nav id="header">
         <div id="homeLogo"> 
@@ -61,7 +62,7 @@
     <section id="infoPage">
         <div id="stockSigns">
           <h1>Stock Neon Signs</h1>
-          <p>Dive into a selection of our in-stock Neon Signs.</p>
+          <p style="color: #747474;">Dive into a selection of our in-stock Neon Signs.</p>
           <br>
           <a class="buttonR">View Shop</a>
       <br></Br></Br>
@@ -88,12 +89,12 @@
             </div>
           </div>
         </div>
+        
         <div id="customSigns">
             <h1>Custom Signs</h1>
-            <p>Not happy with our stock? Feel free to create your own sign!</p>
-            <br>
+            <p style="color: #747474;" id="l4">Not happy with our stock? Feel free to create your own sign!</p><br>
             <a class="buttonR">Customize</a>
-        <br></Br></Br>
+            <br><br><br>
             <div id="productList">
               <div class="product">
                 <img src="assets/img/products/custom/custom1.webp" alt="Product 1">
@@ -108,17 +109,31 @@
                 <img src="assets/img/products/custom/custom4.webp" alt="Product 4">
               </div>
             </div>
-            <br>
-            <h2>Follow our Socials!</h2>
+            <br><br>
+            <video muted playsinline autoplay loop id="teaserVid">
+              <source src="assets/video/teaser.mov" type="video/mp4">
+            </video><br>
+            <h2 id="l3" style="margin-bottom: -10px;">Follow our Socials!</h2>
+            <p id="l2" style="margin-bottom: -15px;">Be ontop when it comes to news and be updated about Neon Airlines,
+              <br>Subscribe to our emails to get the latest offers and releases of neon signs.</p>
             <div class="social-menu">
                   <a href="https://facebook.com/neon_airlines" target="blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
                   <a href="https://www.instagram.com/neon_airlines/" target="blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
                   <a href="https://tiktok.com/@neon_airlines" target="blank"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
                   <a href="https://youtube.com/Neon_airines"><i class="fab fa-youtube" target="blank" aria-hidden="true"></i></a>
-          </div>
-          </div>
+          </div><br><br>
+          <div class="input-container">
+            <input type="email" placeholder="Email" id="email-input">
+            <button type="submit" id="submit-button">
+                <i class="fa fa-arrow-right"></i>
+            </button>
+        </div><br>
+        <span id="error-message" class="fade"></span>
+        <br>
       </section>
       <footer>
+        <p id="copyright">&copy; 2023 Neon Airlines</p>
+        <p id="love">made with ❤️ by <a href="https://github.com/aksel-rag">Ragger</a></p>
         <div class="payment-icons">
           <i class="fab fa-cc-visa" title="Visa"></i>
           <i class="fab fa-cc-mastercard" title="MasterCard"></i>
@@ -127,8 +142,6 @@
           <i class="fab fa-cc-discover" title="Discover"></i>
           <i class="fab fa-cc-diners-club" title="Diners Club"></i>
         </div>
-        <p id="copyright">&copy; 2023 Neon Airlines</p>
-        <!-- made with ❤️ by <a href="https://github.com/aksel-rag">Ragger</a> -->
       </footer>
 </body>
 </html>

@@ -4,9 +4,9 @@
 @import url('https://fonts.googleapis.com/css?family=Assistant');
 @import url('https://fonts.googleapis.com/css?family=Kanit');
 
-
 /*Main Body*/
 body {
+  background-color: #121212;
   margin: 0;
   padding: 0;
   border: none;
@@ -24,60 +24,6 @@ body {
 
 ::-webkit-scrollbar{
 	display: none;
-}
-
-/* Mobile CSS*/
-@media (max-width: 768px) {
-  #productList {
-    display: grid !important;
-    align-items: center !important;
-    grid-template-columns: 1fr 1fr !important;
-  }
-  .product{
-    padding: 1px !important;
-    margin: 1px !important;
-  }
-  .product img {
-    width: 20vh !important;
-    height: 20vh !important;
-  }
-  #navLinks,
-  #icons {
-      display: none !important;
-  }
-  #homeLogo{
-    top: -1.5vh !important;
-  }
-}
-
-@media (max-width: 850px) {
-  #productList {
-    display: grid !important;
-    align-items: center !important;
-    grid-template-columns: 1fr 1fr !important;
-  }
-  .product{
-    padding: 5px !important;
-    margin: 5px !important;
-  }
-  #navLinks,
-  #icons {
-      display: none !important;
-  }
-  #homeLogo{
-    top: -1.5vh !important;
-  }
-}
-
-@media (max-width: 1250px) {
-  #customSigns{
-    margin-top: 130vh !important;
-  }
-  #productList {
-    display: grid !important;
-    align-items: center !important;
-    grid-template-columns: 1fr 1fr !important;
-  }
 }
 
 .menu-icon {
@@ -293,7 +239,7 @@ li{
 
 /*Second Half*/
 #infoPage{
-	height: 200vh;
+	height: 238vh;
 	width: 100%;
 	background-color: #121212;
 }
@@ -301,7 +247,7 @@ li{
   text-align: center;
   font-family: "Kanit";
   position: absolute;
-  margin-top: 105vh;
+  margin-top: 80vh;
   left: 50%;
   color: white;
   transform: translateX(-50%)
@@ -374,19 +320,28 @@ footer {
   font-family: "Kanit";
 }
 #copyright{
+  color: #747474;
   font-size: 1.2vh;
 }
-#copyright a{
+
+#love{
+  
+  color: #747474;
+  font-size: 1.2vh;
+  margin-top: -12px;
+}
+#love a{
   color: #5518AB;
   text-decoration: none;
   transition: .2s all ease;
 }
 
-#copyright a:hover{
+#love a:hover{
   color: white;
 }
 
 .payment-icons{
+  margin-top: -10px;
   font-size: 3vh;
 }
 
@@ -394,4 +349,126 @@ footer {
   margin-top: 5vh;
   font-size: 3vh;
 
+}
+
+.social-menu a {
+  color: #121212;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  text-decoration: none;
+  padding: 15px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.social-menu a:hover {
+  background-color: #121212;
+  color: white;
+}
+
+#teaserVid{
+  border-radius: 10px;
+  height: 100vh;
+  height: 50vh;
+}
+
+.input-container {
+  display: flex;
+  width: 40vh;
+  height: 5vh;
+  margin: 0 auto;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#email-input {
+  color: #444444;
+  flex: 1;
+  background-color: #121212;
+  padding: 10px;
+  border: none;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+#submit-button {
+  border: none;
+  cursor: pointer;
+  background-color: #121212;
+}
+
+#submit-button i {
+  color: #444444;
+  font-size: 16px;
+  margin-right: 5px;
+  transition: 1s ease-in-out;
+}
+
+#l3{
+  font-size: 4vh;
+}
+#l2{
+  color: #747474;
+  font-size: 0.7rem;
+}
+
+#error-message{
+  background-color: #161616a4;
+  border-radius: 5px;
+  transition: opacity 0.5s, height 0.5s;
+}
+
+.fade {
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  #customSigns{
+      margin-top: 110vh;
+    }
+  #l4{
+    font-size: 0.8rem;
+  }
+  #infoPage{
+    height: 280vh !important;
+  }
+  #teaserVid{
+    height: 25vh !important;
+    width: 40vh !important;
+  }
+  #productList {
+    display: grid !important;
+    align-items: center !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .product{
+    padding: 5px !important;
+    margin: 5px !important;
+  }
+  .product img {
+    width: 20vh !important;
+    height: 20vh !important;
+  }
+  #navLinks,
+  #icons {
+      display: none !important;
+  }
+  #homeLogo{
+    top: -1.5vh !important;
+  }
 }

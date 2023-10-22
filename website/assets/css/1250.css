@@ -1,0 +1,18 @@
+@media (max-width: 1250px) {
+    .product{
+      padding: 5px !important;
+      margin: 5px !important;
+    }
+    #customSigns{
+      margin-top: 110vh !important;
+    }
+    #productList {
+      display: grid !important;
+      align-items: center !important;
+      grid-template-columns: 1fr 1fr !important;
+    }
+
+    #infoPage{
+        height: 295vh !important;
+      }
+  }
