@@ -438,6 +438,9 @@ footer {
 }
 
 @media (max-width: 768px) {
+  #mobileNav {
+    width: 75% !important;
+  }
   #customSigns{
       margin-top: 110vh;
     }
@@ -471,4 +474,65 @@ footer {
   #homeLogo{
     top: -1.5vh !important;
   }
+}
+
+#mobileNav {
+  position: fixed;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background-color: #121212f5;
+  transition: left 0.5s;
+}
+
+.menu-visible #mobileNav {
+  left: 0;
+}
+
+#mobileNav a{
+  color: white;
+  text-decoration: none;
+  transition: 1s ease all;
+}
+
+#mobileNav a:hover{
+  color: #383838;
+}
+
+.menu-visible #mobileNav {
+  left: 0;
+}
+
+#mobileLinks{
+  display: grid;
+}
+
+#closeMobile{
+  color: white;
+  position: absolute;
+  right: 0;
+  padding: 25px;
+  font-size: 3vh;
+  font-family: "Kanit";
+  cursor: pointer;
+}
+
+#mobileLinks{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%,-20%);
+  text-align: center;
+  font-family: "Kanit";
+  padding: 15px;
+  font-size: 3vh;
+}
+
+#mobileIcons{
+  position: relative;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%,-95%);
+  text-align: center;
+  font-size: 3vh;
 }

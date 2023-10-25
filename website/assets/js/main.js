@@ -2,7 +2,7 @@ function loadCSSFile() {
   const screenWidth = window.innerWidth;
 
   if (screenWidth <= 768) {
-    document.querySelector('#dynamic-styles').href = 'assets/css/768.css';
+    document.querySelector('#dynamic-styles').href = 'assets/css/style.css';
   } else if (screenWidth <= 850) {
     document.querySelector('#dynamic-styles').href = 'assets/css/850.css';
   } else {
@@ -48,6 +48,17 @@ document.addEventListener("DOMContentLoaded", () => {
       triple = document.createElement("div");
       triple.setAttribute("class", "menu-icon");
       navbar.appendChild(triple);
+
+      triple.addEventListener("click", () =>{
+        let mobileNav = document.querySelector("#mobileNav");
+        triple.style.opacity = "0";
+        document.body.classList.add('menu-visible');
+        let closeMenu = document.querySelector("#closeMobile");
+        closeMenu.addEventListener("click", () =>{
+          document.body.classList.remove('menu-visible');
+          triple.style.opacity = "1";
+        })
+      });
     }
   } else {
     const triple = document.querySelector(".menu-icon");
