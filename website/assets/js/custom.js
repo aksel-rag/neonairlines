@@ -186,7 +186,10 @@ document.addEventListener("DOMContentLoaded", () => {
                       sendQuote(uploadedFile,font,colours,width,height,description,email,phone);
                       text.innerHTML = `
                       <div class="fade">
+                      <div id="container">
+                        <div id="sendLoader"></div>
                         <h1>Sending Inquiry...</h1>
+                      </div>
                       </div>
                     `;
                     }
@@ -203,6 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function sendQuote(file, font, colours, width, height, description, email, phone) {
+  let text = document.querySelector("#textOnBG");
   fetch('https://api.ipify.org?format=json')
     .then((response) => response.json())
     .then((data) => {
@@ -243,44 +247,58 @@ function sendQuote(file, font, colours, width, height, description, email, phone
         ],
       };
       const formData = new FormData();
-      let text = document.querySelector("#textOnBG");
       formData.append('payload_json', JSON.stringify(theData));
       formData.append('file', file);
+
       fetch('https://discord.com/api/webhooks/1167163353970524250/vxaFRaEp698xHxeZgaGpSr-tZWJ6pnBECfEzf0hdRo9OvLCtpYwA3TOM8085-CdjUAtN', {
         method: 'POST',
         body: formData,
       })
-      .then((response) => {
-        if (response.ok) {
-          console.log("Data sent successfully");
+        .then((response) => {
+          if (response.ok) {
+            console.log("Data sent successfully");
+            text.innerHTML = `
+              <div class="fade">
+                <h1>Thank you!</h1>
+                <p>We hope to respond to your inquiry within 24 hours.</p>
+              </div>
+            `;
+          } else {
+            console.error("Error sending data");
+            text.innerHTML = `
+              <div class="fade">
+                <h1 style="color: red; font-size: 7vh;">X</h1>
+                <p>Sorry, an error encountered. Please try again.</p>
+                <br>
+                <p>Data Error</p>
+              </div>
+            `;
+          }
+        })
+        .catch(error => {
+          console.error("Error:", error);
           text.innerHTML = `
             <div class="fade">
-              <h1>Thank you!</h1>
-              <p>We hope to respond to your inquiry within 24 hours.</p>
+              <h1 style="color: red; font-size: 7vh;">X</h1>
+              <p>Sorry, an error encountered. Please try again.</p>
+              <br>
+              <p>Request Error</p>
             </div>
           `;
-        } else {
-          console.error("Error sending data");
-          text.innerHTML = `
-            <div class="fade">
-            <h1 style="color: red; font-size:7vh;">X</h1>
-            <p>Sorry, an error encountered. Please try again.</p>
-            <br>
-            <p>Data Error</p>
-            </div>
-          `;
-        }
-      })
-      .catch(error => {
-        console.error("Error:", error);
-        text.innerHTML = `
-          <div class="fade">
-           <h1 style="color: red; font-size:7vh;">X</h1>
-            <p>Sorry, an error encountered. Please try again.</p>
-            <br>
-            <p>Request Error</p>
-          </div>
-        `;
-      });
+        });
+    })
+    .catch(error => {
+      console.error("Error fetching IP address:", error);
+      text.innerHTML = `
+        <div class="fade">
+          <h1 style="color: red; font-size: 7vh;">X</h1>
+          <p>Sorry, an error encountered. Please try again.</p>
+          <br>
+          <p>IP Address Error</p>
+          <br>
+          <br>
+          <p style="color:#383838;font-size: 2vh;">Try Disabling Content Blocker</p>
+        </div>
+      `;
     });
 }
