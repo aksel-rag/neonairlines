@@ -78,7 +78,6 @@ nav
   transition: all 0.45s ease;
   color: white;
   transition: 1s ease all;
-  background-color: #000000;
 
 }
 
@@ -318,6 +317,132 @@ footer {
     }
   }
 
+
+
+#customizeSection p{
+  color: #fff;
+  font-family: "Kanit";
+  margin-top: -30px;
+}
+
+
+#textOnBG h1{
+  color: white;
+  font-family: "Kanit";
+  font-size: 5vh;
+}
+
 #customizeSection{
-    height: 100vh;
+  height: 88vh;
+}
+
+#textOnBG{
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%,-42%);
+}
+
+.buttonR{
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Kanit";
+  border: none;
+  padding: .75em;
+  border-radius: 0.5em;
+  background: none;
+  color: white;
+  border: 0.2vh solid white;
+  transition: .2s ease-in-out all;
+  font-size: 2vh;
+}
+
+.buttonR:hover{
+  background-color: white;
+  color: black;
+  transform: translateX(-15px);
+}
+
+#design{
+  text-align: center;
+}
+
+#design h1{
+  font-size: 4vh;
+  color: white;
+  font-family: "Kanit";
+}
+
+.file-upload {
+  display: none;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  width: 15vh;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Kanit";
+}
+
+.remove-file, #file-name {
+  display: none;
+  color: #1d7715;
+  cursor: pointer;
+  margin-left: 10px;
+  font-family: "Kanit";
+}
+
+#removeFile{
+  color: white !important;
+  transition: .2s ease-in-out;
+}
+
+#removeFile:hover{
+  color: rgb(77, 77, 77) !important;
+}
+
+#design{
+  margin-top: 8%;
+}
+
+.scroll {
+	background-color: rgba(1, 1, 1, 0.841);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: fade-in 1s;
+}
+
+.customInputs{
+  width: 25vh;
+  height: 3vh;
+  background-color: #121212;
+  border: #383838 solid 1px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+
+#description{
+  width: 35vh;
+  height: 10vh;
+  background-color: #121212;
+  border: #383838 solid 1px;
+  border-radius: 5px;
+  resize: none;
+  color: #fff;
 }

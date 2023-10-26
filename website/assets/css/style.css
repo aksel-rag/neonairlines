@@ -219,6 +219,7 @@ li{
 }
 
 .buttonR{
+  cursor: pointer;
   text-decoration: none;
   font-family: "Kanit";
   border: none;
