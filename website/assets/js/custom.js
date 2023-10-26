@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <span id="removeFile" class="remove-file" onclick="removeFile()">X</span>
       <br><br><br>
       <a id="continue" class="buttonR">Continue</a>
+      <p id="error" style="margin-top:3vh;color:red;"></p>
     </div>
     `;
     let fileInput = document.querySelector("#file-upload");
@@ -98,7 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let page = document.querySelector("#customizeSection");
     continue1.addEventListener("click", () => {
       if (!uploadedFile){
-        alert("Upload a File");
+        let error = document.querySelector("#error");
+        error.textContent = "Please select a file."
       }
       else{
       page.style.height = "95vh";
@@ -111,13 +113,15 @@ document.addEventListener("DOMContentLoaded", () => {
       <input class="customInputs" type="text" id="font" placeholder="Type font name here">
       <br><br><br><br>
       <a id="continue2" class="buttonR">Continue</a>
+      <p id="error" style="margin-top:3vh;color:red;"></p>
       </div>
       `;
       let continue2 = document.querySelector("#continue2");
       let checkFont = document.querySelector("#font");
       continue2.addEventListener("click", () => {
         if (checkFont.value === "") {
-          alert("Please enter a font name");
+          let error = document.querySelector("#error");
+          error.textContent = "Please enter a font."
         } else {
           font = document.querySelector("#font").value;
           page.style.height = "90vh";
@@ -130,13 +134,15 @@ document.addEventListener("DOMContentLoaded", () => {
           <input class="customInputs" type="text" id="colours" placeholder="Enter one or more colours">
           <br><br><br><br>
           <a id="continue3" class="buttonR">Continue</a>
+          <p id="error" style="margin-top:3vh;color:red;"></p>
           </div>
           `;
           let continue3 = document.querySelector("#continue3");
           let checkColours = document.querySelector("#colours");
           continue3.addEventListener("click", () => {
             if (checkColours.value === "") {
-              alert("Please enter one or more colours");
+              let error = document.querySelector("#error");
+              error.textContent = "Please select your colours."
             } else {
               colours = document.querySelector("#colours").value;
               page.style.height = "88vh";
@@ -148,6 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
               <input class="customInputs" type="text" id="signHeight" placeholder="Height">
               <br><br><br>
               <a id="continue4" class="buttonR">Continue</a>
+              <p id="error" style="margin-top:3vh;color:red;"></p>
               </div>
               `;
               let continue4 = document.querySelector("#continue4");
@@ -155,7 +162,8 @@ document.addEventListener("DOMContentLoaded", () => {
               let checkHeight = document.querySelector("#signHeight");
               continue4.addEventListener("click", () => {
                 if (checkWidth.value === "" || checkHeight.value === "") {
-                  alert("Please enter both width and height");
+                  let error = document.querySelector("#error");
+                  error.textContent = "Please enter your dimensions."
                 } else {
                   height = document.querySelector("#signHeight").value;
                   width = document.querySelector("#signWidth").value;
@@ -170,6 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <input class="customInputs" type="text" id="phone" placeholder="Phone number">
                   <br><br><br>
                   <a id="submit" class="buttonR">Submit</a>
+                  <p id="error" style="margin-top:3vh;color:red;"></p>
                   </div>
                   `;
                   let submit = document.querySelector("#submit");
@@ -178,7 +187,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     let checkEmail = document.querySelector("#email");
                     let checkPhone = document.querySelector("#phone");
                     if (checkDescription.value === "" || checkEmail.value === "" || checkPhone.value === "") {
-                      alert("Please fill in all required fields (Description, Email, and Phone)");
+                      let error = document.querySelector("#error");
+                      error.textContent = "Please fill out all fields."
                     } else {
                       description = document.querySelector("#description").value;
                       email = document.querySelector("#email").value;
