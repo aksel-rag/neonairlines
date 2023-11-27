@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
+@import url('https://fonts.googleapis.com/css?family=Assistant');
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+/*Main Body*/
+body {
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+#bgVideo
+{
+	height: 100vh;
+  object-fit: cover;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
+
+::-webkit-scrollbar{
+	display: none;
+}
+
+.menu-icon {
+  top: 4vh;
+  left: 5%;
+  transform: translateX(-5%);
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  cursor: pointer;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  position: absolute;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon::before {
+  top: -10px;
+}
+
+.menu-icon::after {
+  top: 10px;
+}
+
+.menu-icon.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.menu-icon.open::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/*Navbar*/
+nav
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 8vh;
+  margin: 0 auto;
+  transition: all 0.45s ease;
+  color: white;
+  transition: 1s ease all;
+
+}
+
+#navLinks
+{
+  z-index: 1;
+  position: absolute;
+  font-size: 1.9vh;
+  top: 2.5vh;
+  left: 5%;
+  transform: translateX(-5%)
+}
+
+#navLinks a
+{
+	font-family: "Kanit";
+	color: white;
+	text-decoration: none;
+  font-weight: 200;
+  transition: .5s ease all;
+}
+
+#navLinks a:hover
+{
+  color: #888888;
+  text-decoration: underline;
+}
+
+#icons {
+  z-index: 1;
+  position: absolute;
+  font-size: 2.5vh;
+  top: 2.5vh;
+  display: flex;
+  left: 97%;
+  transform: translateX(-97%);
+}
+
+#icons a
+{
+	font-family: "Assistant", sans-serif;
+	color: white;
+	text-decoration: none;
+  font-weight: 200;
+  transition: .5s ease all;
+}
+
+#icons a:hover
+{
+  color: #888888;
+}
+
+#homeLogo{
+  max-width: 6vh;
+  padding: 1em;
+  position: absolute;
+  top: -1vh;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+/*Other CSS*/
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #121212;
+  z-index: 1000;
+}
+.loading:after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border: 6px solid rgb(255, 255, 255);
+  border-top: 6px dotted rgb(255, 255, 255);
+  border-bottom: 6px dotted rgb(253, 253, 253);
+  border-radius: 50%;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}
+/* Mobile CSS */
+#mobileNav {
+    position: fixed;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background-color: #121212f5;
+    transition: left 0.5s;
+  }
+  
+  .menu-visible #mobileNav {
+    left: 0;
+  }
+  
+  #mobileNav a{
+    color: white;
+    text-decoration: none;
+    transition: 1s ease all;
+  }
+  
+  #mobileNav a:hover{
+    color: #383838;
+  }
+  
+  .menu-visible #mobileNav {
+    left: 0;
+  }
+  
+  #mobileLinks{
+    display: grid;
+  }
+  
+  #closeMobile{
+    color: white;
+    position: absolute;
+    right: 0;
+    padding: 25px;
+    font-size: 3vh;
+    font-family: "Kanit";
+    cursor: pointer;
+  }
+  
+  #mobileLinks{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    text-align: center;
+    font-family: "Kanit";
+    padding: 15px;
+    font-size: 3vh;
+  }
+  
+  #mobileIcons{
+    position: relative;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%,-95%);
+    text-align: center;
+    font-size: 3vh;
+  }
+
+
+/*Footer*/
+footer {
+  background-color: #121212;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid #3838389a;
+  font-family: "Kanit";
+}
+#copyright{
+  color: #747474;
+  font-size: 1.2vh;
+}
+
+#love{
+  
+  color: #747474;
+  font-size: 1.2vh;
+  margin-top: -12px;
+}
+#love a{
+  color: #5518AB;
+  text-decoration: none;
+  transition: .2s all ease;
+}
+
+#love a:hover{
+  color: white;
+}
+
+.payment-icons{
+  margin-top: -10px;
+  font-size: 3vh;
+}
+
+.social-menu{
+  margin-top: 5vh;
+  font-size: 3vh;
+
+}
+
+@media (max-width: 768px) {
+    #mobileNav {
+      width: 75% !important;
+    }
+    #infoPage{
+      height: 280vh !important;
+    }
+    #navLinks,
+    #icons {
+        display: none !important;
+    }
+    #homeLogo{
+      top: -1.5vh !important;
+    }
+  }
+
+
+
+#customizeSection p{
+  color: #fff;
+  font-family: "Kanit";
+  margin-top: -30px;
+}
+
+
+#textOnBG h1{
+  color: white;
+  font-family: "Kanit";
+  font-size: 5vh;
+}
+
+#customizeSection{
+  height: 88vh;
+}
+
+#textOnBG{
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 42%;
+  transform: translate(-50%,-42%);
+}
+
+.buttonR{
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Kanit";
+  border: none;
+  padding: .75em;
+  border-radius: 0.5em;
+  background: none;
+  color: white;
+  border: 0.2vh solid white;
+  transition: .2s ease-in-out all;
+  font-size: 2vh;
+}
+
+.buttonR:hover{
+  background-color: white;
+  color: black;
+  transform: translateX(-15px);
+}
+
+.scroll {
+	background-color: rgba(1, 1, 1, 0.841);
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: fade-in 1s;
+}
+
+.customInputs{
+  width: 25vh;
+  height: 3vh;
+  background-color: #121212;
+  border: #383838 solid 1px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+}
+
+#description{
+  width: 35vh;
+  height: 10vh;
+  background-color: #121212;
+  border: #383838 solid 1px;
+  border-radius: 5px;
+  resize: none;
+  color: #fff;
+}
+
+#sendLoader {
+  width: 50px;
+  height: 50px;
+}
+
+#sendLoader::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -30px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  border: 6px solid rgb(255, 255, 255);
+  border-top: 6px dotted rgb(255, 255, 255);
+  border-bottom: 6px dotted rgb(253, 253, 253);
+  border-radius: 50%;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+}

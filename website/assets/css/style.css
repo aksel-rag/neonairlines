@@ -240,7 +240,7 @@ li{
 
 /*Second Half*/
 #infoPage{
-	height: 238vh;
+	height: 205vh;
 	width: 100%;
 	background-color: #121212;
 }
@@ -332,13 +332,13 @@ footer {
   margin-top: -12px;
 }
 #love a{
-  color: #5518AB;
+  color: #747474;
   text-decoration: none;
   transition: .2s all ease;
 }
 
 #love a:hover{
-  color: white;
+  color: #fff;
 }
 
 .payment-icons{
@@ -449,7 +449,7 @@ footer {
     font-size: 0.8rem;
   }
   #infoPage{
-    height: 280vh !important;
+    height: 250vh !important;
   }
   #teaserVid{
     height: 25vh !important;
