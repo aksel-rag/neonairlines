@@ -94,7 +94,7 @@ function sendMessage(description, email, phone) {
       const formData = new FormData();
       formData.append('payload_json', JSON.stringify(theData));
 
-      fetch('https://discord.com/api/webhooks/1167191089636200478/C52XskEctO7coVdspsJAZSVwT5hC_reFR_ShPvwkrSjXkZqg0OFRUCrsY_Df-RBcfS7B', {
+      fetch('', {
         method: 'POST',
         body: formData,
       })

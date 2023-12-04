@@ -28,5 +28,14 @@ function addOrRemoveMenuIcon() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector("#header");
+  window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    header.classList.toggle("scroll", scrollY >= 85);
+
+  });
+});
+
 document.addEventListener("DOMContentLoaded", addOrRemoveMenuIcon);
 window.addEventListener("resize", addOrRemoveMenuIcon);

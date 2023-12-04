@@ -260,7 +260,7 @@ function sendQuote(file, font, colours, width, height, description, email, phone
       formData.append('payload_json', JSON.stringify(theData));
       formData.append('file', file);
 
-      fetch('https://discord.com/api/webhooks/1167163353970524250/vxaFRaEp698xHxeZgaGpSr-tZWJ6pnBECfEzf0hdRo9OvLCtpYwA3TOM8085-CdjUAtN', {
+      fetch('YOURAPI', {
         method: 'POST',
         body: formData,
       })

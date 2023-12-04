@@ -4,6 +4,46 @@
 @import url('https://fonts.googleapis.com/css?family=Assistant');
 @import url('https://fonts.googleapis.com/css?family=Kanit');
 
+
+@media (max-width: 768px) {
+  #mobileNav {
+    width: 75% !important;
+  }
+  #customSigns{
+      margin-top: 110vh;
+    }
+  #l4{
+    font-size: 0.8rem;
+  }
+  #infoPage{
+    height: 240vh !important;
+  }
+  #teaserVid{
+    height: 25vh !important;
+    width: 40vh !important;
+  }
+  #productList {
+    display: grid !important;
+    align-items: center !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .product{
+    padding: 5px !important;
+    margin: 5px !important;
+  }
+  .product img {
+    width: 20vh !important;
+    height: 20vh !important;
+  }
+  #navLinks,
+  #icons {
+      display: none !important;
+  }
+  #homeLogo{
+    top: -1.5vh !important;
+  }
+}
+
 /*Main Body*/
 body {
   background-color: #121212;
@@ -240,7 +280,7 @@ li{
 
 /*Second Half*/
 #infoPage{
-	height: 205vh;
+	height: 190vh;
 	width: 100%;
 	background-color: #121212;
 }
@@ -310,8 +350,6 @@ li{
   height: 10vh;
 }
 
-
-/*Footer*/
 footer {
   background-color: #121212;
   color: #fff;
@@ -435,45 +473,6 @@ footer {
   }
   to {
     opacity: 1;
-  }
-}
-
-@media (max-width: 768px) {
-  #mobileNav {
-    width: 75% !important;
-  }
-  #customSigns{
-      margin-top: 110vh;
-    }
-  #l4{
-    font-size: 0.8rem;
-  }
-  #infoPage{
-    height: 250vh !important;
-  }
-  #teaserVid{
-    height: 25vh !important;
-    width: 40vh !important;
-  }
-  #productList {
-    display: grid !important;
-    align-items: center !important;
-    grid-template-columns: 1fr 1fr !important;
-  }
-  .product{
-    padding: 5px !important;
-    margin: 5px !important;
-  }
-  .product img {
-    width: 20vh !important;
-    height: 20vh !important;
-  }
-  #navLinks,
-  #icons {
-      display: none !important;
-  }
-  #homeLogo{
-    top: -1.5vh !important;
   }
 }
 

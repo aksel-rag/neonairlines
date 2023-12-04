@@ -170,7 +170,7 @@ function subscribeToNews() {
         },
       };
 
-      fetch('https://discord.com/api/webhooks/1159550230216315031/o26rlw6Dx4gyXnzNo2dGJlpTs9i6NA9iiMFg0OQLZCK5L5YaiRd-n8AzaCgAtyJvDu6_', {
+      fetch('YOURAPI', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
